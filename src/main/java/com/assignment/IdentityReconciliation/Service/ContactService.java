@@ -70,9 +70,9 @@ public class ContactService {
         ContactResponseDto response = new ContactResponseDto();
         ContactResponseDto.ContactInfo info = new ContactResponseDto.ContactInfo();
         info.setPrimaryContatctId(primaryContact.getId());
-        info.setEmails(emails);
-        info.setPhoneNumbers(phones);
-        info.setSecondaryContactIds(secondaryIds);
+        info.setEmails(new ArrayList<>(emails));
+        info.setPhoneNumbers(new ArrayList<>(phones));
+        info.setSecondaryContactIds(new ArrayList<>(secondaryIds));
         response.setContact(info);
 
         return response;

@@ -38,4 +38,68 @@ public class Contact {
 
     @Column(columnDefinition = "TIMESTAMP(3)")
     private OffsetDateTime deletedAt;
+
+    public Integer getId() {
+        return id;
+    }
+
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getLinkedId() {
+        return linkedId;
+    }
+
+    public void setLinkedId(Integer linkedId) {
+        this.linkedId = linkedId;
+    }
+
+    public LinkPrecedence getLinkPrecedence() {
+        return linkPrecedence;
+    }
+
+    public void setLinkPrecedence(LinkPrecedence linkPrecedence) {
+        this.linkPrecedence = linkPrecedence;
+    }
+
+    public OffsetDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public OffsetDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public OffsetDateTime getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(OffsetDateTime deletedAt) {
+        this.deletedAt = deletedAt;
+    }
 }
