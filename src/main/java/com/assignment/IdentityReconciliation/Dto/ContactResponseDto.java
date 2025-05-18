@@ -12,8 +12,14 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class ContactResponseDto {
-    private Long primaryContatctId;
-    private List<String> emails;
-    private List<String> phoneNumbers;
-    private List<Long> secondaryContactIds;
+
+    private ContactInfo contact;
+
+    @Data
+    public static class ContactInfo {
+        private Integer primaryContatctId;
+        private List<String> emails;
+        private List<String> phoneNumbers;
+        private List<Integer> secondaryContactIds;
+    }
 }

@@ -16,15 +16,17 @@ import java.time.OffsetDateTime;
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private String phoneNumber;
 
     private String email;
 
-    private int linkedId;
+    private Integer linkedId;
 
-    private String linkPrecedence;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private LinkPrecedence linkPrecedence;
 
     @CreationTimestamp
     @Column(columnDefinition = "TIMESTAMP(3)")
